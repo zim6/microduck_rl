@@ -38,3 +38,29 @@ backup_onnx/
 logdir/.claude/
 logdir/
 logdir/.claude/worktrees/
+
+# Microduck delay-robustness experiment: large/intermediate outputs
+results/train_*.txt
+results/full_delay_sweep/
+results/*_seed42_delay_sweep.txt
+
+# Intermediate/legacy figures
+results/multiseed_*_vs_latency.png
+results/survival_vs_latency.png
+results/xy_rmse_vs_latency.png
+results/yaw_rmse_vs_latency.png
+
+# Legacy single-seed delay-analysis outputs
+results/AB_delay_summary.csv
+results/A_delay_results.csv
+results/B_delay_results.csv
+
+# Legacy delay-evaluation development scripts
+scripts/evaluate_delay.py
+scripts/evaluate_delay_v01.py
+scripts/evaluate_delay_v03.py
+scripts/evaluate_delay_v04.py
+scripts/evaluate_delay_v05_backup.py
+scripts/parse_delay_sweep.py
+scripts/analyze_delay_results.py
+scripts/plot_delay_results.py
