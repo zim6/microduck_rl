@@ -1,19 +1,28 @@
-# Microduck Actuator-Delay Robustness Study
+# Microduck Actuator-Delay Robustness: PPO Locomotion under Execution Latency
 
-## Overview
+This project studies whether actuator-delay randomization during training improves the robustness of a learned Microduck locomotion policy to fixed execution latency.
 
-This project studies how actuator command execution delay affects a learned locomotion policy for the Microduck robot, and whether training with randomized actuator delay improves robustness to unseen execution latency.
+## Key Result
 
-The central research question is:
+Training PPO locomotion policies with randomized **15–30 ms actuator command delay** substantially improved survival robustness under increasing execution latency.
 
-> **Does training with randomized actuator command latency improve robustness to unseen fixed execution delays?**
+At an **out-of-training-range fixed delay of 40 ms**:
+
+- **No-delay training:** 45.4% mean survival
+- **Randomized-delay training:** 94.5% mean survival
+- **Absolute difference:** +49.2 percentage points
+- The survival improvement was observed across **all 3 independent training seeds**
+
+![Survival robustness](results/final_survival_vs_latency.png)
+
+> **Research question:** Does training with randomized actuator command latency improve robustness to unseen fixed execution delays?
 
 Two PPO training conditions are compared:
 
 - **A — No-delay training:** fixed actuator delay of 0 physics steps (0 ms).
 - **B — Randomized-delay training:** actuator delay randomized between 3 and 6 physics steps (15–30 ms).
 
-Both conditions use the same Microduck flat-terrain velocity task and the same training budget. Three independent training seeds are evaluated for each condition.
+Both conditions use the same Microduck flat-terrain velocity task and the same training budget. Three independently trained policies are evaluated for each condition.
 
 ---
 
