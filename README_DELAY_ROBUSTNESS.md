@@ -302,6 +302,8 @@ results/checkpoint_manifest.csv
 
 The manifest maps each training condition and training seed to its corresponding checkpoint and is used as the source of truth for evaluation.
 
+Trained checkpoints are not included in the repository due to file size. They can be regenerated using the provided training scripts and training seeds.
+
 ## Fixed-Delay Evaluation
 
 The frozen evaluation protocol is implemented in:
