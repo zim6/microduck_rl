@@ -102,7 +102,6 @@ Evaluation-seed results are first averaged within each independently trained pol
 
 ## 1. Survival Robustness
 
-![Survival robustness](results/final_survival_vs_latency.png)
 
 Policies trained without actuator delay perform reliably at low latency but degrade substantially as execution delay increases.
 

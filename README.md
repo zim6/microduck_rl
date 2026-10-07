@@ -1,5 +1,26 @@
 # Microduck RL
 
+
+> [!NOTE]
+> ## Research Extension — Actuator-Delay Robustness
+>
+> This fork includes a controlled PPO locomotion study investigating whether
+> actuator-delay randomization during training improves robustness to fixed
+> execution latency.
+>
+> **Key result:** At an out-of-training-range fixed **40 ms actuator delay**,
+> mean survival increased from **45.4%** with no-delay training to **94.5%**
+> with randomized **15–30 ms delay training** (**+49.2 percentage points**).
+> The survival improvement was observed across all **3 independent training seeds**.
+>
+> **[Read the full actuator-delay robustness study →](README_DELAY_ROBUSTNESS.md)**
+>
+> ![Actuator-delay survival robustness](results/final_survival_vs_latency.png)
+>
+> This study is an experimental extension built on the original
+> Pollen Robotics Microduck RL repository. The original project documentation
+> continues below.
+
 <img width="2215" height="884" alt="image" src="https://github.com/user-attachments/assets/5db7cc83-b3ce-4f7c-83f0-0572a63baed7" />
 
 
